@@ -25,6 +25,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - uses: jlumbroso/free-disk-space@v1
+        with:
+          docker-images: false
+          tool-cache: false        
+
       - id: string
         uses: ASzc/change-string-case-action@v6
         with:
